@@ -226,7 +226,7 @@ function App() {
             </div>
             <div className="video-container scroll-anim">
               <video 
-                src="/ppppp.mp4" 
+                src="/WhatsApp Video 2026-07-01 at 03.37.51.mp4" 
                 autoPlay 
                 loop 
                 muted 
