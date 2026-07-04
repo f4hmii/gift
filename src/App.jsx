@@ -96,6 +96,16 @@ function App() {
     }
   }, [])
 
+  useEffect(() => {
+    if (audioRef.current) {
+      if (showVideoPage) {
+        audioRef.current.pause()
+      } else {
+        audioRef.current.play().catch(e => console.log("Audio play failed:", e))
+      }
+    }
+  }, [showVideoPage])
+
   const handleNextPageClick = () => {
     setFadingOutLetter(true)
     setTimeout(() => {
@@ -117,7 +127,7 @@ function App() {
             &larr; Kembali
           </button>
           <video 
-            src="/WhatsApp Video 2026-07-01 at 03.37.51.mp4" 
+            src="/ppppp.mp4" 
             controls 
             autoPlay 
             className={`full-video ${videoEnded ? 'blur-video' : ''}`}
@@ -216,7 +226,7 @@ function App() {
             </div>
             <div className="video-container scroll-anim">
               <video 
-                src="/WhatsApp Video 2026-07-01 at 03.37.51.mp4" 
+                src="/ppppp.mp4" 
                 autoPlay 
                 loop 
                 muted 
